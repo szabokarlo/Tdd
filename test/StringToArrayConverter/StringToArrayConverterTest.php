@@ -36,6 +36,7 @@ class StringToArrayConverterTest extends \PHPUnit_Framework_TestCase
 	public function getDataForInputIsSet()
 	{
 		return array(
+			array(''),
 			array('tghtrehrav32f'),
 			array('fsfsdfsdfsf \n'),
 			array('g4z5z356h3#'),
