@@ -13,12 +13,24 @@ class StringToArrayConverterTest extends \PHPUnit_Framework_TestCase
 		$this->converter = new StringToArrayConverter();
 	}
 
-	public function testIfInputIsSet()
+	/**
+	 * @dataProvider   getDataForInputIsSet
+	 */
+	public function testIfInputIsSet($input)
 	{
-		$input = 'tghtrehrav32f';
 		$this->converter->setInput($input);
 
 		$this->assertEquals($input, $this->converter->getInput());
+	}
+
+	public function getDataForInputIsSet()
+	{
+		return array(
+			array('tghtrehrav32f'),
+			array('fsfsdfsdfsf \n'),
+			array('g4z5z356h3#'),
+			array('%fsdfsdf')
+		);
 	}
 }
  
