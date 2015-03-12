@@ -5,11 +5,18 @@ namespace Tdd\StringToArrayConverter;
 class StringToArrayConverter
 {
 	/**
-	 * The input of the converter
+	 * The input of the converter.
 	 *
 	 * @var string
 	 */
 	private $input;
+
+	/**
+	 * The output of the converter.
+	 *
+	 * @var array
+	 */
+	private $output;
 
 	public function setInput($input)
 	{
@@ -43,6 +50,21 @@ class StringToArrayConverter
 			return array();
 		}
 
-		return explode(',', $this->input);
+		$explodedByNewLines = explode("\n", $this->input);
+		if (count($explodedByNewLines) == 1)
+		{
+			$this->output = explode(',', $explodedByNewLines[0]);
+		}
+		else
+		{
+			foreach ($explodedByNewLines as $explodedByNewLine)
+			{
+				$explodedByCommas = explode(',', $explodedByNewLine);
+				$this->output[]   = $explodedByCommas;
+			}
+		}
+
+		return $this->output;
 	}
+
 }
