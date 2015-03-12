@@ -18,7 +18,7 @@ class StringToArrayConverterTest extends \PHPUnit_Framework_TestCase
 		$input = 'tghtrehrav32f';
 		$this->converter->setInput($input);
 
-		$this->assertTrue($input, $this->converter->getInput());
+		$this->assertEquals($input, $this->converter->getInput());
 	}
 }
  
