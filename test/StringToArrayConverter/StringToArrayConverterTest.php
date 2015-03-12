@@ -94,5 +94,18 @@ class StringToArrayConverterTest extends \PHPUnit_Framework_TestCase
 			array('Mark,Anthony,marka@lib.de', array('Mark', 'Anthony', 'marka@lib.de')),
 		);
 	}
+
+	public function testWithMultiLineInputWithoutAnySpecialPrefix()
+	{
+		$input          = '211,22,35' . "\n" . '10,20,33';
+		$expectedOutput = array(
+			array('211', '22', '35'),
+			array('10', '20', '33')
+		);
+
+		$this->converter->setInput($input);
+
+		$this->assertEquals($expectedOutput, $this->converter->getArray());
+	}
 }
  
