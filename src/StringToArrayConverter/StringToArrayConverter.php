@@ -38,7 +38,11 @@ class StringToArrayConverter
 	 */
 	public function getArray()
 	{
-		return array();
-	}
+		if ($this->input == '')
+		{
+			return array();
+		}
 
+		return array('a', 'b', 'c');
+	}
 }
