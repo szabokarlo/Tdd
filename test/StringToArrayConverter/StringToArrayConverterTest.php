@@ -44,13 +44,25 @@ class StringToArrayConverterTest extends \PHPUnit_Framework_TestCase
 	}
 
 	/**
+	 * @dataProvider   getDataForInvalidInput
+	 *
 	 * @expectedException \InvalidArgumentException
 	 */
-	public function testExceptionIsThrownInCaseOfInvalidInput()
+	public function testExceptionIsThrownInCaseOfInvalidInput($invalidInput)
 	{
-		$invalidInput = 10;
-
 		$this->converter->setInput($invalidInput);
+	}
+
+	public function getDataForInvalidInput()
+	{
+		return array(
+			array(10),
+			array(3.2),
+			array(true),
+			array(array()),
+			array(array('input' => 'teszt')),
+			array(new \stdClass()),
+		);
 	}
 
 }
