@@ -12,5 +12,13 @@ class StringToArrayConverterTest extends \PHPUnit_Framework_TestCase
 	{
 		$this->converter = new StringToArrayConverter();
 	}
+
+	public function testIfInputIsSet()
+	{
+		$input = 'tghtrehrav32f';
+		$this->converter->setInput($input);
+
+		$this->assertTrue($input, $this->converter->getInput());
+	}
 }
  
