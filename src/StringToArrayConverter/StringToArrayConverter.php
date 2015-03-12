@@ -30,4 +30,15 @@ class StringToArrayConverter
 	{
 		return $this->input;
 	}
+
+	/**
+	 * The converted version of the input.
+	 *
+	 * @return array
+	 */
+	public function getArray()
+	{
+		return array();
+	}
+
 }
