@@ -32,5 +32,16 @@ class StringToArrayConverterTest extends \PHPUnit_Framework_TestCase
 			array('%fsdfsdf')
 		);
 	}
+
+	/**
+	 * @expectedException \InvalidArgumentException
+	 */
+	public function testExceptionIsThrownInCaseOfInvalidInput()
+	{
+		$invalidInput = 10;
+
+		$this->converter->setInput($invalidInput);
+	}
+
 }
  
