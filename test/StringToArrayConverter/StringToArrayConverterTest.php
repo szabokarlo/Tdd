@@ -72,5 +72,13 @@ class StringToArrayConverterTest extends \PHPUnit_Framework_TestCase
 
 		$this->assertEquals(array(), $this->converter->getArray());
 	}
+
+	public function testWithOneLineString()
+	{
+		$input = "a, b, c";
+		$this->converter->setInput($input);
+
+		$this->assertEquals(array('a', 'b', 'c'), $this->converter->getArray());
+	}
 }
  
