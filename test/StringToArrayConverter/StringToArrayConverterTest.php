@@ -6,8 +6,18 @@ use Tdd\StringToArrayConverter\StringToArrayConverter;
 
 class StringToArrayConverterTest extends \PHPUnit_Framework_TestCase
 {
+	/**
+	 * An instance of the StringToArrayConverter object.
+	 *
+	 * @var StringToArrayConverter
+	 */
 	private $converter;
 
+	/**
+	 * Makes initialization for the test environment.
+	 *
+	 * @return void
+	 */
 	public function setUp()
 	{
 		$this->converter = new StringToArrayConverter();
