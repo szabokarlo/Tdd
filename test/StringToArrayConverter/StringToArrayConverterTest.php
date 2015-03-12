@@ -66,5 +66,11 @@ class StringToArrayConverterTest extends \PHPUnit_Framework_TestCase
 		);
 	}
 
+	public function testWithEmptyInput()
+	{
+		$this->converter->setInput('');
+
+		$this->assertEquals(array(), $this->converter->getArray());
+	}
 }
  
