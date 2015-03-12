@@ -1,0 +1,7 @@
+input validálás, hibás input esetén exceptiont várunk
+tesztelni kell hogy ha az input nem tartalmaz speciális karaktereket a megfelelő helyeken (\n, #useFirstLineAsLabels, #, %) akkor egy dimenziós tömböt kapunk-e az elvárt értékekkel
+	üres string esetén üres tömb
+tesztelni kell hogy ha az input nem tartalmaz speciális karaktereket a megfelelő helyeken (#useFirstLineAsLabels, #, %) de tartalmaz \n karaktert akkor az elvárt értéket kapjuk-e
+tesztelni kell hogy ha az input nem tartalmaz speciális karaktereket a megfelelő helyeken (#, %) de #useFirstLineAsLabels kezdődik akkor az elvárt értéket kapjuk-e
+tesztelni kell hogy ha az input nem tartalmaz speciális karaktereket a megfelelő helyeken (%, #useFirstLineAsLabels) de #-el kezdődik akkor az elvárt értéket kapjuk-e
+tesztelni kell hogy ha az input %-el kezdődik akkor az elvárt értéket kapjuk-e
