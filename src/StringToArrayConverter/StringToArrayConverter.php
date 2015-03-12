@@ -4,13 +4,15 @@ namespace Tdd\StringToArrayConverter;
 
 class StringToArrayConverter
 {
+	private $input;
+
 	public function setInput($input)
 	{
-
+		 $this->input = $input;
 	}
 
 	public function getInput()
 	{
-		return 'tghtrehrav32f';
+		return $this->input;
 	}
 }
