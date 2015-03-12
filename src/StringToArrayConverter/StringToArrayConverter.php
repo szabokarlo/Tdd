@@ -43,6 +43,6 @@ class StringToArrayConverter
 			return array();
 		}
 
-		return array('a', 'b', 'c');
+		return explode(',', $this->input);
 	}
 }
